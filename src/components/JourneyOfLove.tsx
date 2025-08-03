@@ -1,6 +1,6 @@
 import { PoemCard } from './PoemCard';
 import { FloatingElements } from './FloatingElements';
-import romanticBackground from '@/assets/romantic-background.jpg';
+import romanticBackgroundVideo from '@/assets/romantic-background-video.mp4';
 
 export const JourneyOfLove = () => {
   const poemSections = [
@@ -52,14 +52,20 @@ export const JourneyOfLove = () => {
 
   return (
     <div className="min-h-screen relative">
-      {/* Background with overlay */}
-      <div 
-        className="fixed inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url(${romanticBackground})`,
-        }}
-      />
-      <div className="fixed inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background/80" />
+      {/* Video Background */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="fixed inset-0 w-full h-full object-cover"
+      >
+        <source src={romanticBackgroundVideo} type="video/mp4" />
+      </video>
+      
+      {/* Darker romantic overlay */}
+      <div className="fixed inset-0 bg-gradient-to-b from-background/90 via-background/85 to-background/90" />
+      <div className="fixed inset-0 bg-gradient-to-r from-primary/10 via-transparent to-accent/10" />
       
       {/* Floating elements */}
       <FloatingElements />
