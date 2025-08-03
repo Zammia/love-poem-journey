@@ -19,9 +19,10 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'romantic': ['Playfair Display', 'serif'],
+				'cartoon': ['Fredoka', 'sans-serif'],
+				'playful': ['Kalam', 'cursive'],
 				'script': ['Dancing Script', 'cursive'],
-				'sans': ['Inter', 'sans-serif'],
+				'rounded': ['Comfortaa', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

@@ -75,11 +75,11 @@ export const JourneyOfLove = () => {
         {/* Hero Section */}
         <section className="min-h-screen flex items-center justify-center px-4">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="font-romantic text-5xl md:text-7xl lg:text-8xl font-bold mb-8 gradient-text fade-in-up">
-              A Journey of Love
+            <h1 className="font-cartoon text-5xl md:text-7xl lg:text-8xl font-bold mb-8 gradient-text cartoon-title bouncy-text fade-in-up">
+              A Journey of Love ✨
             </h1>
-            <p className="font-script text-2xl md:text-3xl text-primary/80 mb-12 fade-in-up delay-300">
-              An emotional visual poem about finding your way through life's journey
+            <p className="font-playful text-2xl md:text-3xl text-primary/90 mb-12 fade-in-up delay-300 cartoon-text">
+              An enchanting visual story about finding your way through life's magical journey 💫
             </p>
             <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto fade-in-up delay-500" />
           </div>
@@ -90,7 +90,7 @@ export const JourneyOfLove = () => {
           <div className="max-w-6xl mx-auto space-y-20">
             {poemSections.map((section, index) => (
               <PoemCard key={index} delay={section.delay}>
-                <p className="font-romantic text-lg md:text-xl lg:text-2xl leading-relaxed text-foreground/90 italic">
+                <p className="font-playful text-lg md:text-xl lg:text-2xl leading-relaxed text-foreground/90 cartoon-text">
                   {section.text}
                 </p>
               </PoemCard>
@@ -101,11 +101,11 @@ export const JourneyOfLove = () => {
         {/* Final Message */}
         <section className="py-20 px-4">
           <PoemCard delay={2400} className="text-center pulse-glow">
-            <blockquote className="font-script text-3xl md:text-4xl text-primary mb-6">
-              "This journey of love never ends"
+            <blockquote className="font-script text-3xl md:text-4xl text-primary mb-6 cartoon-text bouncy-text">
+              "This journey of love never ends" 💕
             </blockquote>
-            <p className="font-romantic text-xl text-foreground/70">
-              — made by <span className="text-primary font-semibold">Etuuu</span>
+            <p className="font-rounded text-xl text-foreground/80 cartoon-text">
+              — crafted with love by <span className="text-primary font-bold gradient-text">Etuuu</span> ✨
             </p>
           </PoemCard>
         </section>

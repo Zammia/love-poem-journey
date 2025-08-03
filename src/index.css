@@ -120,13 +120,21 @@ All colors MUST be HSL for the cinematic love story theme.
     font-family: 'Inter', sans-serif;
   }
   
-  /* Romantic typography */
-  .font-romantic {
-    font-family: 'Playfair Display', serif;
+  /* Cartoon typography */
+  .font-cartoon {
+    font-family: 'Fredoka', sans-serif;
+  }
+  
+  .font-playful {
+    font-family: 'Kalam', cursive;
   }
   
   .font-script {
     font-family: 'Dancing Script', cursive;
+  }
+  
+  .font-rounded {
+    font-family: 'Comfortaa', sans-serif;
   }
 }
 
@@ -146,12 +154,38 @@ All colors MUST be HSL for the cinematic love story theme.
     box-shadow: 0 12px 40px hsl(220 15% 0% / 0.4);
   }
   
-  /* Gradient text */
+  /* Cartoon text effects */
   .gradient-text {
     background: var(--gradient-text);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 30px hsl(320 55% 65% / 0.5);
+  }
+  
+  .cartoon-title {
+    text-shadow: 
+      0 0 20px hsl(320 55% 65% / 0.8),
+      0 0 40px hsl(280 40% 45% / 0.6),
+      3px 3px 0px hsl(220 15% 8%),
+      6px 6px 10px hsl(220 15% 0% / 0.8);
+    filter: drop-shadow(0 0 15px hsl(320 55% 65% / 0.4));
+  }
+  
+  .cartoon-text {
+    text-shadow: 
+      0 0 10px hsl(340 15% 95% / 0.8),
+      2px 2px 0px hsl(220 15% 8%),
+      4px 4px 8px hsl(220 15% 0% / 0.6);
+  }
+  
+  .bouncy-text {
+    animation: bounce-subtle 2s ease-in-out infinite;
+  }
+  
+  @keyframes bounce-subtle {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
   }
   
   /* Floating animation */
