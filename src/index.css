@@ -8,44 +8,44 @@ All colors MUST be HSL for the cinematic love story theme.
 
 @layer base {
   :root {
-    /* Romantic Color Palette */
-    --background: 220 15% 8%;  /* Deep night blue */
-    --foreground: 340 15% 95%; /* Soft romantic white */
+    /* Panda Black & White Palette */
+    --background: 220 15% 8%;  /* Deep night black */
+    --foreground: 0 0% 95%; /* Pure white */
 
     --card: 220 20% 12%;       /* Darker card background */
-    --card-foreground: 340 10% 92%;
+    --card-foreground: 0 0% 92%;
 
     --popover: 220 20% 10%;
-    --popover-foreground: 340 10% 95%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 320 55% 65%;    /* Romantic rose pink */
-    --primary-foreground: 340 15% 95%;
+    --primary: 0 0% 95%;    /* Pure white */
+    --primary-foreground: 220 15% 8%;
 
-    --secondary: 250 30% 25%;  /* Deep purple */
-    --secondary-foreground: 340 10% 90%;
+    --secondary: 0 0% 20%;  /* Dark gray */
+    --secondary-foreground: 0 0% 90%;
 
     --muted: 220 15% 15%;      /* Muted dark */
-    --muted-foreground: 340 5% 70%;
+    --muted-foreground: 0 0% 70%;
 
-    --accent: 280 40% 45%;     /* Mystic purple */
-    --accent-foreground: 340 15% 95%;
+    --accent: 0 0% 40%;     /* Medium gray */
+    --accent-foreground: 0 0% 95%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 220 15% 20%;     /* Subtle borders */
     --input: 220 15% 18%;
-    --ring: 320 55% 65%;       /* Rose ring */
+    --ring: 0 0% 95%;       /* White ring */
 
-    /* Romantic Gradients */
-    --gradient-romantic: linear-gradient(135deg, hsl(320 55% 65% / 0.8), hsl(280 40% 45% / 0.6));
-    --gradient-night: linear-gradient(180deg, hsl(220 15% 8%), hsl(250 20% 12%));
-    --gradient-glass: linear-gradient(135deg, hsl(340 20% 95% / 0.1), hsl(320 30% 85% / 0.05));
-    --gradient-text: linear-gradient(135deg, hsl(320 55% 75%), hsl(280 40% 65%));
+    /* Panda Gradients */
+    --gradient-panda: linear-gradient(135deg, hsl(0 0% 95% / 0.8), hsl(0 0% 70% / 0.6));
+    --gradient-night: linear-gradient(180deg, hsl(220 15% 8%), hsl(220 20% 12%));
+    --gradient-glass: linear-gradient(135deg, hsl(0 0% 95% / 0.1), hsl(0 0% 85% / 0.05));
+    --gradient-text: linear-gradient(135deg, hsl(0 0% 95%), hsl(0 0% 75%));
 
     /* Glassmorphism effects */
-    --glass-bg: hsl(340 20% 95% / 0.08);
-    --glass-border: hsl(340 20% 95% / 0.15);
+    --glass-bg: hsl(0 0% 95% / 0.08);
+    --glass-border: hsl(0 0% 95% / 0.15);
     --glass-shadow: 0 8px 32px hsl(220 15% 0% / 0.3);
 
     /* Animation variables */
@@ -149,8 +149,8 @@ All colors MUST be HSL for the cinematic love story theme.
   }
   
   .glass-card:hover {
-    background: hsl(340 20% 95% / 0.12);
-    border-color: hsl(320 55% 65% / 0.3);
+    background: hsl(0 0% 95% / 0.12);
+    border-color: hsl(0 0% 95% / 0.3);
     box-shadow: 0 12px 40px hsl(220 15% 0% / 0.4);
   }
   
@@ -160,32 +160,68 @@ All colors MUST be HSL for the cinematic love story theme.
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 30px hsl(320 55% 65% / 0.5);
+    text-shadow: 0 0 30px hsl(0 0% 95% / 0.5);
   }
   
   .cartoon-title {
     text-shadow: 
-      0 0 20px hsl(320 55% 65% / 0.8),
-      0 0 40px hsl(280 40% 45% / 0.6),
+      0 0 20px hsl(0 0% 95% / 0.8),
+      0 0 40px hsl(0 0% 70% / 0.6),
       3px 3px 0px hsl(220 15% 8%),
       6px 6px 10px hsl(220 15% 0% / 0.8);
-    filter: drop-shadow(0 0 15px hsl(320 55% 65% / 0.4));
+    filter: drop-shadow(0 0 15px hsl(0 0% 95% / 0.4));
   }
   
   .cartoon-text {
     text-shadow: 
-      0 0 10px hsl(340 15% 95% / 0.8),
+      0 0 10px hsl(0 0% 95% / 0.8),
       2px 2px 0px hsl(220 15% 8%),
       4px 4px 8px hsl(220 15% 0% / 0.6);
   }
   
   .bouncy-text {
-    animation: bounce-subtle 2s ease-in-out infinite;
+    animation: bounce-subtle 3s ease-in-out infinite;
   }
   
   @keyframes bounce-subtle {
     0%, 100% { transform: translateY(0px); }
     50% { transform: translateY(-5px); }
+  }
+  
+  /* Dancing Panda Animation */
+  .dancing-panda {
+    animation: dance 2s ease-in-out infinite;
+    font-size: 3rem;
+    display: inline-block;
+  }
+  
+  @keyframes dance {
+    0%, 100% { 
+      transform: rotate(-5deg) translateY(0px) scale(1);
+    }
+    25% { 
+      transform: rotate(5deg) translateY(-10px) scale(1.1);
+    }
+    50% { 
+      transform: rotate(-3deg) translateY(-5px) scale(1.05);
+    }
+    75% { 
+      transform: rotate(3deg) translateY(-10px) scale(1.1);
+    }
+  }
+  
+  /* Slow fade in animations */
+  .slow-fade-in {
+    animation: slow-fade-in 2s ease-out forwards;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  
+  @keyframes slow-fade-in {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
   
   /* Floating animation */
@@ -200,12 +236,12 @@ All colors MUST be HSL for the cinematic love story theme.
   
   /* Pulse glow effect */
   .pulse-glow {
-    animation: pulse-glow 2s ease-in-out infinite;
+    animation: pulse-glow 3s ease-in-out infinite;
   }
   
   @keyframes pulse-glow {
-    0%, 100% { box-shadow: 0 0 20px hsl(320 55% 65% / 0.3); }
-    50% { box-shadow: 0 0 40px hsl(320 55% 65% / 0.6); }
+    0%, 100% { box-shadow: 0 0 20px hsl(0 0% 95% / 0.3); }
+    50% { box-shadow: 0 0 40px hsl(0 0% 95% / 0.6); }
   }
   
   /* Fade in animations */

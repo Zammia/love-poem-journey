@@ -2,11 +2,10 @@ import { useEffect, useRef, useState } from 'react';
 
 interface PoemCardProps {
   children: React.ReactNode;
-  delay?: number;
   className?: string;
 }
 
-export const PoemCard = ({ children, delay = 0, className = "" }: PoemCardProps) => {
+export const PoemCard = ({ children, className = "" }: PoemCardProps) => {
   const [isVisible, setIsVisible] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
 
@@ -14,7 +13,7 @@ export const PoemCard = ({ children, delay = 0, className = "" }: PoemCardProps)
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setTimeout(() => setIsVisible(true), delay);
+          setIsVisible(true);
         }
       },
       { threshold: 0.1 }
@@ -29,12 +28,12 @@ export const PoemCard = ({ children, delay = 0, className = "" }: PoemCardProps)
         observer.unobserve(cardRef.current);
       }
     };
-  }, [delay]);
+  }, []);
 
   return (
     <div
       ref={cardRef}
-      className={`glass-card rounded-lg p-8 md:p-12 m-4 max-w-4xl mx-auto transform transition-all duration-1000 ${
+      className={`glass-card rounded-lg p-8 md:p-12 m-4 max-w-4xl mx-auto transform transition-all duration-2000 ${
         isVisible 
           ? 'opacity-100 translate-y-0 scale-100' 
           : 'opacity-0 translate-y-8 scale-95'
